@@ -1,55 +1,150 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&display=swap');
 body{
-    font-family: 'Outfit', sans-serif;
-    background-color: hsl(212, 45%, 89%);
+    max-width: 1440px;
     margin: 0;
+    background-color:hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
 }
 
-.box-qrcode{
-    margin: auto;
-    display: grid;
-    width: 300px;
-    height: 100vh;   
-}
-
-.qrcode{
-    margin: auto;
-    background-color: #fff;    
+.container{
+    background-color: #fff;
+    width: 580px;
     border-radius: 15px;
-    padding: 15px;
+}
+
+.area-item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);    
+}
+
+.area-img{
+    height: 500px;
+    background-image: url('images/image-product-desktop.jpg');
+    background-position: center;
+    background-size:cover;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.area-desc{    
+    padding: 25px;
+}
+
+.area-desc span{
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 5px;
+    
+}
+.area-desc h1{
+    color: hsl(212, 21%, 14%);
+    font-family: 'Fraunces', serif; 
+    font-size: 38px;
+    line-height: 37px;
+}
+
+.area-desc p{
+    color: hsl(212, 21%, 14%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;    
+}
+.preco{
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.qrcode h1{
-    text-align: center;
-    font-size: 25px;
-    font-weight: 700;
-    color: hsl(218, 44%, 22%)
+.area-desc h2{
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif; 
+    font-size: 28px;
+    padding-right: 15px;
 }
 
-.qrcode p{
-    text-align: center;
+.area-desc h3{
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    font-weight: 400;
-    color: hsl(220, 15%, 55%)
+    text-decoration: line-through;
 }
 
-.qrcode img{
-    width:280px;
-    border-radius: 15px;
+.area-desc a{
+    display: block;
+    text-align: center;
+    background-color:hsl(158, 36%, 37%); 
+    padding: 12px 45px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
 }
-
 
 .attribution { 
     position: absolute;
     bottom: 10px;
     font-size: 11px; 
-    text-align: center; 
+      
 }
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 450px){
+    
+    .area-item{
+        grid-template-columns: 1fr;    
+    }
+    .container{
+        background-color:hsl(30, 38%, 92%);
+        padding: 15px 20px;
+        border-radius: 10px;
+        height: 564px;
+    }
+
+    .area-img{
+        height: 220px;
+        background-image: url('images/image-product-mobile.jpg');
+        background-position: center;
+        background-size:cover;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        
+    }
+    .area-desc{ 
+        background-color: #fff;   
+        padding: 20px 25px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+   .area-desc h1{
+        color: hsl(212, 21%, 14%);
+        font-family: 'Fraunces', serif; 
+        font-size: 32px;
+        line-height: 37px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .attribution { 
+      
+        position: absolute;
+        bottom: 5px;
+        font-size: 9px; 
+          
+    }
+    
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+    
+    .preco{
+        height: 50px;
+    }
 }
